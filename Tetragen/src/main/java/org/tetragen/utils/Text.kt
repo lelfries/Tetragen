@@ -88,6 +88,44 @@ object Text {
     /** A [ChatModifier] representing an `MAGIC` Modifier. */
     @JvmStatic
     val MAGIC = ChatModifier(BukkitChatColor.MAGIC)
+
+    /** Returns the [ChatModifier] associated with the specified [String]
+     * @return The [ChatModifier] with the name specified. */
+    fun getModifierByName(name: String): ChatModifier {
+        return when (name.toLowerCase()) {
+            "aqua" -> AQUA
+            "blue" -> BLUE
+            "black" -> BLACK
+            "gold" -> GOLD
+            "gray" -> GRAY
+            "green" -> GREEN
+            "red" -> RED
+            "white" -> WHITE
+            "yellow" -> YELLOW
+            "dark aqua" -> DARK_AQUA
+            "dark_aqua" -> DARK_AQUA
+            "dark blue" -> DARK_BLUE
+            "dark_blue" -> DARK_BLUE
+            "dark gray" -> DARK_GRAY
+            "dark_gray" -> DARK_GRAY
+            "dark green" -> DARK_GREEN
+            "dark_green" -> DARK_GREEN
+            "dark purple" -> DARK_PURPLE
+            "dark_purple" -> DARK_PURPLE
+            "light purple" -> LIGHT_PURPLE
+            "light_purple" -> LIGHT_PURPLE
+            "dark red" -> DARK_RED
+            "dark_red" -> DARK_RED
+            "italic" -> ITALIC
+            "clear" -> CLEAR
+            "reset" -> CLEAR
+            "bold" -> BOLD
+            "underline" -> UNDERLINE
+            "magic" -> MAGIC
+            else -> throw IllegalModifierException("$name is not a valid modifier.")
+        }
+    }
+
 }
 
 /** A class that represents a Chat Modification, such as Bold or ChatColors */
@@ -95,7 +133,13 @@ class ChatModifier internal constructor(private val modification: BukkitChatColo
     /** Returns the String version of this ChatModification; Allows for use with [StringBuilder].
      * @return The String version of this object, containing the char needed for ChatColors and modifications. */
     override fun toString(): String = modification.toString()
+
     /** Returns whether the object is the same as this Object.
      * @return whether the specified object is the same as this. */
     override fun equals(other: Any?): Boolean = if (other is ChatModifier) modification == other.modification else false
 }
+
+/** An Exception that is thrown when a specified [LogLevel] does not exist. */
+class IllegalModifierException
+/** The constructor for this class (Provided that there is only one time when this class is used.)*/
+    (message: String) : IllegalArgumentException(message)
