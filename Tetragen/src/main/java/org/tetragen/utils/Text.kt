@@ -91,6 +91,7 @@ object Text {
 
     /** Returns the [ChatModifier] associated with the specified [String]
      * @return The [ChatModifier] with the name specified. */
+    @JvmStatic
     fun getModifierByName(name: String): ChatModifier {
         return when (name.toLowerCase()) {
             "aqua" -> AQUA
