@@ -12,10 +12,10 @@ object Log {
     /** Bukkit's server console. */
     private val logger = Bukkit.getLogger()
 
-    /** Sends a message to the console with an [LogLevel.INFO] level.
+    /** Sends a message to the console without any [LogLevel] level.
      * @param message The message to be sent.  */
     @JvmStatic
-    fun message(message: String) = logger.info(message)
+    fun message(message: String) = console.sendMessage(message)
 
     /** Sends a message to the console with the specified [LogLevel].
      * @param message The message to be sent.
@@ -63,11 +63,6 @@ object Log {
      * @param message The message to be sent.  */
     @JvmStatic
     fun finest(message: String) = logger.finest(message)
-
-    /** Sends a message to the console without any [LogLevel]
-     * @param message The message to be sent.  */
-    @JvmStatic
-    fun messagePrefixLess(message: String) = console.sendMessage(message)
 }
 
 /** A Class that represents Levels, which can be used in unison with [Log] */
