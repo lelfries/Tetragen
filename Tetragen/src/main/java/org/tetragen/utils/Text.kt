@@ -20,7 +20,7 @@ object Text {
     val DARK_PURPLE = ChatModifier(BukkitChatColor.DARK_PURPLE)
     val LIGHT_PURPLE = ChatModifier(BukkitChatColor.LIGHT_PURPLE)
     val DARK_RED = ChatModifier(BukkitChatColor.DARK_PURPLE)
-
+    
     val ITALIC = ChatModifier(BukkitChatColor.ITALIC)
     val CLEAR = ChatModifier(BukkitChatColor.RESET)
     val BOLD = ChatModifier(BukkitChatColor.BOLD)
