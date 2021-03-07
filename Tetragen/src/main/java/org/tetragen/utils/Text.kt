@@ -126,20 +126,22 @@ object Text {
         }
     }
 
+
+    /** A class that represents a Chat Modification, such as Bold or ChatColors */
+    class ChatModifier internal constructor(private val modification: BukkitChatColor) {
+
+        /** Returns the String version of this ChatModification; Allows for use with [StringBuilder].
+         * @return The String version of this object, containing the char needed for ChatColors and modifications. */
+        override fun toString(): String = modification.toString()
+
+        /** Returns whether the object is the same as this Object.
+         * @return whether the specified object is the same as this. */
+        override fun equals(other: Any?): Boolean =
+            if (other is ChatModifier) modification == other.modification else false
+    }
+
+    /** An Exception that is thrown when a specified [ChatModifier] does not exist. */
+    class IllegalModifierException
+    /** The constructor for this class (Provided that there is only one time when this class is used.)*/
+        (message: String) : IllegalArgumentException(message)
 }
-
-/** A class that represents a Chat Modification, such as Bold or ChatColors */
-class ChatModifier internal constructor(private val modification: BukkitChatColor) {
-    /** Returns the String version of this ChatModification; Allows for use with [StringBuilder].
-     * @return The String version of this object, containing the char needed for ChatColors and modifications. */
-    override fun toString(): String = modification.toString()
-
-    /** Returns whether the object is the same as this Object.
-     * @return whether the specified object is the same as this. */
-    override fun equals(other: Any?): Boolean = if (other is ChatModifier) modification == other.modification else false
-}
-
-/** An Exception that is thrown when a specified [ChatModifier] does not exist. */
-class IllegalModifierException
-/** The constructor for this class (Provided that there is only one time when this class is used.)*/
-    (message: String) : IllegalArgumentException(message)
