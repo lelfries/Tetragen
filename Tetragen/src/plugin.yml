@@ -1,0 +1,7 @@
+name: Tetragen
+main: org.tetragen.Tetragen
+version: 1.0.0
+description: A powerful, configurable custom world generator
+prefix: Tetra
+website: tetragen.org
+load: STARTUP
