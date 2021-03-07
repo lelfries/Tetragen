@@ -139,7 +139,7 @@ class ChatModifier internal constructor(private val modification: BukkitChatColo
     override fun equals(other: Any?): Boolean = if (other is ChatModifier) modification == other.modification else false
 }
 
-/** An Exception that is thrown when a specified [LogLevel] does not exist. */
+/** An Exception that is thrown when a specified [ChatModifier] does not exist. */
 class IllegalModifierException
 /** The constructor for this class (Provided that there is only one time when this class is used.)*/
     (message: String) : IllegalArgumentException(message)
