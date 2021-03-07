@@ -69,23 +69,23 @@ object Text {
     @JvmStatic
     val DARK_RED = ChatModifier(BukkitChatColor.DARK_PURPLE)
 
-    /** A [ChatModifier] representing an `ITALIC` Modifier */
+    /** A [ChatModifier] representing an `ITALIC` Modifier. */
     @JvmStatic
     val ITALIC = ChatModifier(BukkitChatColor.ITALIC)
 
-    /** A [ChatModifier] representing an `CLEAR` Modifier */
+    /** A [ChatModifier] representing an `CLEAR` Modifier. */
     @JvmStatic
     val CLEAR = ChatModifier(BukkitChatColor.RESET)
 
-    /** A [ChatModifier] representing an `BOLD` Modifier */
+    /** A [ChatModifier] representing an `BOLD` Modifier. */
     @JvmStatic
     val BOLD = ChatModifier(BukkitChatColor.BOLD)
 
-    /** A [ChatModifier] representing an `UNDERLINE` Modifier */
+    /** A [ChatModifier] representing an `UNDERLINE` Modifier. */
     @JvmStatic
     val UNDERLINE = ChatModifier(BukkitChatColor.UNDERLINE)
 
-    /** A [ChatModifier] representing an `MAGIC` Modifier */
+    /** A [ChatModifier] representing an `MAGIC` Modifier. */
     @JvmStatic
     val MAGIC = ChatModifier(BukkitChatColor.MAGIC)
 }
