@@ -4,7 +4,8 @@ import org.bukkit.Bukkit
 import java.util.logging.Level
 
 /** An Object that contains methods to help deal with the [Bukkit Console](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Bukkit.html#getLogger())
- * Meant to drastically reduce the amount of boilerplate code. */
+ * Meant to drastically reduce the amount of boilerplate code.
+ * @author croissant396 */
 object Log {
     /** Represents the console */
     private val console = Bukkit.getConsoleSender()
